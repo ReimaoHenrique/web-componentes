@@ -1,0 +1,49 @@
+.cartao {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .foto {
+    width: 100%;
+    height: auto;
+    transition: transform 1.3s ease;
+  }
+  
+  .texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2C2C2C;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+    transform: translateY(100%);
+  }
+  
+  .cartao:hover .foto {
+    transform: scale(1.1);
+  }
+  
+  .cartao:hover .texto {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
