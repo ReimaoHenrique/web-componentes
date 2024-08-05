@@ -1,0 +1,79 @@
+/* ClientCard.module.css */
+.card {
+  border-radius: 1.5rem;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Necessário para posicionar a fotoFirst corretamente */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites */
+}
+
+.cardOpen {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: #22193b;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative; /* Garante que o conteúdo da header esteja sobre a foto */
+  z-index: 1; /* Coloca o conteúdo da header acima da foto */
+}
+
+.profilePicture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.stars {
+  margin-left: auto;
+  position: relative; /* Garante que o conteúdo das estrelas esteja sobre a foto */
+  z-index: 2; /* Coloca as estrelas acima da foto */
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  position: relative; /* Permite o posicionamento da fotoFirst dentro */
+  width: 100%; /* Garante que ocupa toda a largura disponível */
+  height: 100%; /* Garante que ocupa toda a altura disponível */
+}
+
+.photoFirstWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%; /* Ocupa metade da largura do contêiner */
+  height: 150px; /* Altura fixa para a foto no estado fechado */
+  overflow: hidden; /* Garante que o fundo não ultrapasse os limites */
+  z-index: 0; /* Coloca a foto atrás dos outros elementos */
+}
+
+.photoFirst {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Ajusta o fundo para cobrir a área */
+  background-repeat: no-repeat; /* Não repete a imagem de fundo */
+  z-index: 0;
+}
